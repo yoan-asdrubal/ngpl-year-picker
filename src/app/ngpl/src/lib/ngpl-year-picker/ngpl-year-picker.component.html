@@ -1,0 +1,30 @@
+<mat-form-field class="ngpl-year-picker-mat-form-field {{customClass}}"
+                [color]="color"
+                [appearance]="appearance"
+                [floatLabel]="showLoading ? 'always' : floatLabel"
+
+>
+  <mat-label>{{placeHolder}}</mat-label>
+  <ngpl-skeleton [width]="showLoadingWidth" [height]="showLoadingHeight"  [isLoading]="showLoading">
+    <input [min]="_min" [max]="_max" matInput autocomplete="off"
+           name="ngplYearPicker"
+           (click)="picker.open()"
+           ngDefaultControl
+           [matDatepicker]="picker"
+           skipValidation
+           (keydown)="$event.preventDefault()"
+           [ngplDisableControl]="disabledControl"
+           [readOnly]="readOnlyControl"
+           [formControl]="yearCtrl">
+  </ngpl-skeleton>
+  <mat-datepicker (opened)="open()" (closed)="close()" #picker startView="multi-year"
+                  (yearSelected)="dateInput($event,  picker)"
+  ></mat-datepicker>
+  <mat-datepicker-toggle matSuffix [disabled]="disabledControl || readOnlyControl"
+                         *ngIf="showLoading!==true"
+                         [for]="picker">
+
+  </mat-datepicker-toggle>
+</mat-form-field>
+
+

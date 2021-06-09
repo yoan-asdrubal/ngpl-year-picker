@@ -1,0 +1,84 @@
+<section>
+  <div>
+    <mat-checkbox [formControl]="disableControl" class="mr-3">
+      Disable Control
+    </mat-checkbox>
+    <mat-checkbox [formControl]="readOnlyControl" class="mr-3">
+      ReadOnly Control
+    </mat-checkbox>
+    <mat-checkbox [formControl]="loadingControl" class="mr-3">
+      Show Loading
+    </mat-checkbox>
+  </div>
+  <form [formGroup]="formGroup" fxLayout="column">
+    <div fxLayout fxLayoutAlign="space-around">
+      <ngpl-year-picker
+        [ngplDisableControl]="disableControl.value"
+        [readOnlyControl]="readOnlyControl.value"
+        [showLoading]="loadingControl.value"
+        formControlName="yearpicker"
+        ngplWidth="250px"
+        placeHolder="Year Picker 1">
+
+      </ngpl-year-picker>
+
+      <ngpl-year-picker
+        [ngplDisableControl]="disableControl.value"
+        [readOnlyControl]="readOnlyControl.value"
+        [showLoading]="loadingControl.value"
+        formControlName="yearpicker1"
+        ngplWidth="250px"
+        placeHolder="Year Picker 2">
+
+      </ngpl-year-picker>
+      <ngpl-year-picker
+        [readOnlyControl]="readOnlyControl.value"
+        [showLoading]="loadingControl.value"
+        formControlName="yearpicker2"
+        ngplWidth="250px"
+        placeHolder="Year Picker">
+
+      </ngpl-year-picker>
+
+    </div>
+    <div fxLayout fxLayoutAlign="space-around">
+      <ngpl-year-picker
+        [ngplDisableControl]="disableControl.value"
+        [readOnlyControl]="readOnlyControl.value"
+        [showLoading]="loadingControl.value"
+        formControlName="yearpicker3"
+        ngplWidth="250px"
+        placeHolder="Year Picker">
+
+      </ngpl-year-picker>
+      <ngpl-year-picker
+        [ngplDisableControl]="disableControl.value"
+        [readOnlyControl]="readOnlyControl.value"
+        [showLoading]="loadingControl.value"
+        formControlName="yearpicker4"
+        ngplWidth="250px"
+        placeHolder="Year Picker">
+
+      </ngpl-year-picker>
+      <ngpl-year-picker
+        [readOnlyControl]="readOnlyControl.value"
+        [showLoading]="loadingControl.value"
+        formControlName="yearpicker5"
+        [min]="formGroup.get('yearpicker3').value"
+        [max]="formGroup.get('yearpicker4').value"
+        ngplWidth="250px"
+        placeHolder="Year Picker">
+
+      </ngpl-year-picker>
+
+    </div>
+
+  </form>
+
+  <div fxLayout="" fxLayoutAlign="space-around">
+    <pre>{{formGroup.value | json}}</pre>
+    <pre>{{formGroup.getRawValue() | json}}</pre>
+  </div>
+
+
+</section>

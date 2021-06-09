@@ -1,0 +1,31 @@
+.ngpl-year-picker-mat-form-field {
+  width: 100%;
+
+  input {
+    cursor: pointer;
+  }
+
+  .mat-form-field-wrapper {
+    .mat-form-field-flex {
+      .mat-form-field-suffix {
+        .mat-datepicker-toggle {
+          button {
+            display: flex !important;
+            font-size: inherit !important;
+            width: 2.5em !important;
+            height: 2.5em !important;
+            justify-content: center;
+            align-items: center;
+
+            span {
+              svg {
+                width: 1.5em !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
