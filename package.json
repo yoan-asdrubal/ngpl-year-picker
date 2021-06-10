@@ -28,7 +28,7 @@
     "@angular/router": "~11.0.5",
     "@ngneat/until-destroy": "^8.0.3",
     "moment": "^2.29.1",
-    "ngpl-common": "^1.0.19",
+    "ngpl-common": "^2.0.3",
     "ngx-reactivetoolkit": "^8.0.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",

@@ -12,7 +12,7 @@
            ngDefaultControl
            [matDatepicker]="picker"
            skipValidation
-           (keydown)="$event.preventDefault()"
+           [ngplPreventKeyboard]="allowUserInput!==false || allowUserInput === null"
            [ngplDisableControl]="disabledControl"
            [readOnly]="readOnlyControl"
            [formControl]="yearCtrl">

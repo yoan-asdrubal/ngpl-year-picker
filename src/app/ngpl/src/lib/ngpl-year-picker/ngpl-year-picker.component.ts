@@ -119,10 +119,12 @@ export class NgplYearPickerComponent implements OnInit, OnChanges, OnDestroy, Co
 
   @Input() readOnlyControl = false;
 
+  @Input() allowUserInput = false;
   /**
    * Emite cuando cambia el valor seleccionado
    */
   @Output() valueChange = new EventEmitter();
+
 
   ngControl: NgControl;
 
