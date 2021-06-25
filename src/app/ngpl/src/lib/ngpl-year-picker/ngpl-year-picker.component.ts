@@ -74,8 +74,6 @@ export class NgplYearPickerComponent implements OnInit, OnChanges, OnDestroy, Co
 
   @Input() color = 'accent';
 
-  @Input() skeleton = false;
-
   @Input() customClass: '';
 
   _value: number;
