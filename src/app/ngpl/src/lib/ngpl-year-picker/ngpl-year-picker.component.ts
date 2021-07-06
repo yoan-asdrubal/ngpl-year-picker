@@ -1,8 +1,10 @@
 import {
-  ChangeDetectionStrategy, ChangeDetectorRef,
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
   Component,
   EventEmitter,
-  forwardRef, Injector,
+  forwardRef,
+  Injector,
   Input,
   OnChanges,
   OnDestroy,
@@ -17,8 +19,8 @@ import {Moment} from 'moment';
 import {Changes} from 'ngx-reactivetoolkit';
 import {debounceTime, take, tap} from 'rxjs/operators';
 import {UntilDestroy, untilDestroyed} from '@ngneat/until-destroy';
-import {NGPL_FILTER_BASE, NgplFilterBase} from 'ngpl-common';
 import {timer} from 'rxjs';
+import {NGPL_FILTER_BASE, NgplFilterBase} from 'ngpl-filter';
 
 
 const MONTH_MODE_FORMATS = {

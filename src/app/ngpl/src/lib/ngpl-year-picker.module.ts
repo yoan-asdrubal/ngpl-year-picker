@@ -9,6 +9,7 @@ import {NgplCommonDirectivesModule, NgplCommonModule} from 'ngpl-common';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {NgplYearPickerComponent} from './ngpl-year-picker/ngpl-year-picker.component';
+import {NgplFilterModule} from 'ngpl-filter';
 
 const components = [
   NgplYearPickerComponent
@@ -27,6 +28,7 @@ const components = [
     MatTooltipModule,
     OverlayModule,
     NgplCommonModule,
+    NgplFilterModule,
     NgplCommonDirectivesModule
   ]
 })
